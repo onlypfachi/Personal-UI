@@ -1,0 +1,68 @@
+---
+import Button from "../components/Button.astro";
+interface Props {
+  title: any;
+  body: any;
+  href: any;
+}
+import logo from "../assets/logo_.png";
+const { href, title } = Astro.props;
+---
+
+<nav>
+  <div class="logo">
+    <p class="name">Personal-UI</p>
+    <img src={logo.src} alt="logo" />
+  </div>
+  <ul>
+    <li>
+      <Button title="Projects" href="#" body="" />
+    </li>
+    <li>
+      <Button title="Work" href="#" body="" />
+    </li>
+    <li>
+      <Button title="About me" href="#" body="" />
+    </li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: var(--color-text);
+    height: 15px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  nav img {
+    width: 2rem;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  nav ul li {
+    margin-left: 2rem;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+</style>
